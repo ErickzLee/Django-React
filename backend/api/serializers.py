@@ -11,7 +11,7 @@ class UserSerializers(serializers.ModelSerializer):
         user = User.objects.create_user(**validated_data)
         return user
     
-class NoteSerializer(serializers.ModeSerializer):
+class NoteSerializer(serializers.ModelSerializer):
     class Meta:
         model = Note
         fields = ["id", "title", "content", "created_at", "author"]
